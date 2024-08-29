@@ -15,12 +15,10 @@
 }
  
 body {
-    background-image: url("IMG/Espaço");/*Adiciona uma imagem de fundo no elemento*/
-    background-repeat: no-repeat; /*background-repeat em CSS é usada para repetir a imagem de fundo tanto horizontal quanto verticalmente*/
-    background-attachment: fixed; /*background-attachment determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco*/
-    background-size: cover; /*background-size do CSS especifica o tamanho das imagens de fundo. Com o Cover ocorre o ajusate da imagem o mais largamente possível e mantém sua proporção*/
-    min-height: 100vh;
-    margin: 0px;
+    background-image: url("https://i.imgur.com/PBhNk5G.gif");/*Adiciona uma imagem de fundo no elemento*/
+    background-repeat: no-repeat; /*background-repeat em CSS é usada para repetir a imagem de fundo tanto horizontal quanto verticalmente*/ /*background-attachment determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco*/
+    background-size: 800px ; /*background-size do CSS especifica o tamanho das imagens de fundo. Com o Cover ocorre o ajusate da imagem o mais largamente possível e mantém sua proporção*/
+    margin: 15px, 50px 15px 50px;
 }
  
 .container {
@@ -227,7 +225,7 @@ button:active {
     border-radius: 0.5em;
     box-shadow: inset 0 0 0.1em #828181, 0 0 0.8em #444444;
     text-align : center;
-    background-color : #8aa861;
+    background-color : #ffffff;
     margin: 10px;
 }
  
@@ -362,11 +360,21 @@ button:active {
         height : 170px;
     }
 }
+
+ audio {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+ }
         </style>
     </head>
     <body>
+      <audio controls>
+        <source src="WhatsApp Video 2024-08-27 at 09.40.12.mp3" type="audio/mpeg">
+        </audio>
         <div id="conteudo_astronauta">
-            <img src="https://i.imgur.com/A8RHEPd.png" class="img-astronalta" id="astronalta_voando" onclick="clicouAstronalta();" style="width:200px;float: left;position:absolute;">
+            <img src="https://i.imgur.com/7uPlLZq.png" class="img-astronalta" id="astronalta_voando" onclick="clicouVegeta();" style="width:200px;float: right;position:absolute;">
+            
         </div>
         <div class="container">
             <div id="conteudo_calculadora" class="calculadora-flutuante">
@@ -404,15 +412,15 @@ button:active {
             </div>
         </div>
         <script>
-            function clicouAstronalta(){
-                document.getElementById("astronalta_nao").style.display = "block";
+           function clicouVegeta(){
+                document.getElementById("velhodahavan").style.display = "block";
                 window.setTimeout(function (){
-                    document.getElementById("astronalta_nao").style.display = "none";
+                    document.getElementById("velhodahavan").style.display = "none";
                 }, 3500);
             }
         </script>
         <script>
-                function adicionarValorVisor(valor){
+         function adicionarValorVisor(valor){
     log("Adicionou o texto " + valor + " no visor.");
     document.getElementById("visor").value += valor;
 }
@@ -525,7 +533,6 @@ function log(valor){
         var textolog="<p>"+valor+"</p>"+document.getElementById("conteudo_logs").innerHTML;
         document.getElementById("conteudo_logs").innerHTML = textolog;
     }
-}
-        </script>
+}     </script>
     </body>
 </html>
